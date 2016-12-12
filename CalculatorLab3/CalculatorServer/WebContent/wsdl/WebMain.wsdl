@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://sjsu.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://sjsu.com" xmlns:intf="http://sjsu.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://sjsu.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="register">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="firstname" type="xsd:string"/>
+      <element name="lastname" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="registerResponse">
+    <complexType/>
+   </element>
+   <element name="info1">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="info1Response">
+    <complexType/>
+   </element>
+   <element name="called">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="calledResponse">
+    <complexType>
+     <sequence>
+      <element name="calledReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sell">
+    <complexType>
+     <sequence>
+      <element name="p_name" type="xsd:string"/>
+      <element name="p_price" type="xsd:string"/>
+      <element name="p_disc" type="xsd:string"/>
+      <element name="username" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sellResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="info1Request">
+
+      <wsdl:part element="impl:info1" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="calledRequest">
+
+      <wsdl:part element="impl:called" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="info1Response">
+
+      <wsdl:part element="impl:info1Response" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="calledResponse">
+
+      <wsdl:part element="impl:calledResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="sellResponse">
+
+      <wsdl:part element="impl:sellResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="registerResponse">
+
+      <wsdl:part element="impl:registerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="sellRequest">
+
+      <wsdl:part element="impl:sell" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="registerRequest">
+
+      <wsdl:part element="impl:register" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WebMain">
+
+      <wsdl:operation name="register">
+
+         <wsdl:input message="impl:registerRequest" name="registerRequest"/>
+
+         <wsdl:output message="impl:registerResponse" name="registerResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="info1">
+
+         <wsdl:input message="impl:info1Request" name="info1Request"/>
+
+         <wsdl:output message="impl:info1Response" name="info1Response"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="called">
+
+         <wsdl:input message="impl:calledRequest" name="calledRequest"/>
+
+         <wsdl:output message="impl:calledResponse" name="calledResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sell">
+
+         <wsdl:input message="impl:sellRequest" name="sellRequest"/>
+
+         <wsdl:output message="impl:sellResponse" name="sellResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WebMainSoapBinding" type="impl:WebMain">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="register">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="registerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="registerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="info1">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="info1Request">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="info1Response">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="called">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="calledRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="calledResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sell">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sellRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sellResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WebMainService">
+
+      <wsdl:port binding="impl:WebMainSoapBinding" name="WebMain">
+
+         <wsdlsoap:address location="http://localhost:8081/Test/services/WebMain"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/login.js"></script>
+</head>
+    <div class="container">
+<body ng-app="login" ng-controller="login">
+    
+    <div class="jumbotron">
+    <h1>Bootstrap Calculator</h1>
+    <p>Calculator using Node,Angular and Bootstrap</p>
+    </div>
+    
+<form name="calc">
+    
+    <div class="row">
+        
+        <div class = "col-md-4">
+            
+            <input name="rohan" class="form-control"  ng-model = "rohan" size="12" > <br>
+            
+            
+            
+            
+            
+
+        </br>
+
+            
+            <div class = "row">
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '1'" >1</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '2'"   >2</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '3'" >3</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '/'" >/</button>
+                </div>
+            </div>
+            
+            </br>
+            
+            <div class = "row">
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '4'" >4</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '5'" >5</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '6'" >6</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '*'" >*</button>
+                </div>
+            </div>
+        
+            </br>
+    
+            <div class = "row">
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '7'" >7</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '8'" >8</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '9'" >9</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '-'" >-</button>
+                </div>
+            </div>
+    
+            </br>
+        
+            <div class = "row">
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block " ng-click="rohan =rohan + '0'" >0</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '.'" >.</button>
+                </div>
+                <div class="col-md-3">
+                <button type="submit" class="btn btn-primary btn-block" ng-click= "rohan = ''"> clear</button>
+                </div>
+                <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" ng-click="rohan =rohan + '+'" >+</button>
+                </div>
+            </div>
+            
+        
+             </br>        
+             
+					<input type="submit" value = "calculate " class="btn btn-success btn-block" ng-click="submit();"
+					
+
+        
+        
+        </div>
+    
+    </div>
+</div>
+</form>
+    
+    
+    
+    
+    
+    </body>
+</html>
